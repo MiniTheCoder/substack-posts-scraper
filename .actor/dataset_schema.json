@@ -1,0 +1,156 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "description": "Unique Substack post ID"
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the post"
+      },
+      "subtitle": {
+        "type": "string",
+        "description": "Subtitle or deck"
+      },
+      "url": {
+        "type": "string",
+        "description": "Canonical URL to the post"
+      },
+      "slug": {
+        "type": "string",
+        "description": "Post slug"
+      },
+      "postDate": {
+        "type": "string",
+        "description": "Publication timestamp in ISO format"
+      },
+      "audience": {
+        "type": "string",
+        "description": "Audience level ('everyone' or 'only_paid')"
+      },
+      "isPaid": {
+        "type": "boolean",
+        "description": "True if post is locked behind a paid paywall"
+      },
+      "reactions": {
+        "type": "integer",
+        "description": "Total reaction/like count"
+      },
+      "comments": {
+        "type": "integer",
+        "description": "Total comment count"
+      },
+      "restacks": {
+        "type": "integer",
+        "description": "Total restack/share count"
+      },
+      "wordCount": {
+        "type": "integer",
+        "description": "Total word count"
+      },
+      "description": {
+        "type": "string",
+        "description": "Post summary or meta description"
+      },
+      "coverImageUrl": {
+        "type": "string",
+        "description": "Banner or thumbnail image URL"
+      },
+      "type": {
+        "type": "string",
+        "description": "Post content type (e.g. newsletter, podcast)"
+      },
+      "podcastUrl": {
+        "type": "string",
+        "description": "Direct podcast audio URL if available"
+      },
+      "podcastDuration": {
+        "type": "number",
+        "description": "Podcast audio duration in seconds"
+      },
+      "publicationId": {
+        "type": "integer",
+        "description": "Substack publication identifier"
+      },
+      "publicationUrl": {
+        "type": "string",
+        "description": "Root publication URL"
+      },
+      "authorName": {
+        "type": "string",
+        "description": "Primary author display name"
+      },
+      "authorHandle": {
+        "type": "string",
+        "description": "Primary author Substack handle"
+      },
+      "authorBio": {
+        "type": "string",
+        "description": "Author biography"
+      },
+      "authorPhotoUrl": {
+        "type": "string",
+        "description": "Author avatar photo URL"
+      },
+      "authorPublicationUrl": {
+        "type": "string",
+        "description": "Author primary publication URL"
+      },
+      "scrapedAt": {
+        "type": "string",
+        "description": "Scrape execution timestamp in ISO format"
+      }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "title",
+          "url",
+          "authorName",
+          "reactions",
+          "comments",
+          "audience",
+          "wordCount",
+          "postDate"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "columns": {
+          "title": {
+            "label": "Post Title"
+          },
+          "url": {
+            "label": "Post URL",
+            "format": "link"
+          },
+          "authorName": {
+            "label": "Author"
+          },
+          "reactions": {
+            "label": "Reactions"
+          },
+          "comments": {
+            "label": "Comments"
+          },
+          "audience": {
+            "label": "Audience"
+          },
+          "wordCount": {
+            "label": "Words"
+          },
+          "postDate": {
+            "label": "Published Date"
+          }
+        }
+      }
+    }
+  }
+}

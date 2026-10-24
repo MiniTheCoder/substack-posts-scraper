@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Substack Posts Scraper Output",
+  "description": "Extracted Substack posts dataset with engagement metrics, author profiles, and post metadata.",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

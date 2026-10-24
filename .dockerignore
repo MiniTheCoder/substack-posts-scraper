@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+storage/
+.git/
+.gitignore
+README.md
+*.json
+!actor.json
+!input_schema.json
+!dataset_schema.json
+!output_schema.json

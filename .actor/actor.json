@@ -1,0 +1,16 @@
+{
+    "actorSpecification": 1,
+    "name": "substack-posts-scraper",
+    "title": "Substack Newsletter & Author Leads Scraper",
+    "description": "Extract newsletter post archives, author bylines, social profiles, reaction counts, and podcast episodes from any Substack publication with zero browser overhead.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "python-empty"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

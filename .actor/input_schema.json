@@ -1,0 +1,45 @@
+{
+    "title": "Substack Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "publications": {
+            "title": "Substack Publications or URLs",
+            "type": "array",
+            "description": "List of Substack publication subdomains, URLs, or custom domains (e.g. 'lenny', 'https://newsletter.pragmaticengineer.com', 'sinocism.com').",
+            "editor": "stringList",
+            "prefill": [
+                "lenny",
+                "pragmaticengineer"
+            ]
+        },
+        "maxPostsPerPublication": {
+            "title": "Max Posts Per Publication",
+            "type": "integer",
+            "description": "Maximum number of posts to extract per publication.",
+            "default": 30,
+            "minimum": 1,
+            "maximum": 1000,
+            "editor": "number"
+        },
+        "sort": {
+            "title": "Sort Order",
+            "type": "string",
+            "description": "Sort order for posts.",
+            "default": "new",
+            "editor": "select",
+            "enum": ["new", "top", "search"],
+            "enumTitles": ["Newest First", "Top / Most Popular", "Search Relevance"]
+        },
+        "audienceFilter": {
+            "title": "Audience Filter",
+            "type": "string",
+            "description": "Filter posts by audience access level.",
+            "default": "all",
+            "editor": "select",
+            "enum": ["all", "free_only", "paid_only"],
+            "enumTitles": ["All Posts (Free & Paid)", "Free Posts Only", "Paid Subscriber Posts Only"]
+        }
+    },
+    "required": ["publications"]
+}
