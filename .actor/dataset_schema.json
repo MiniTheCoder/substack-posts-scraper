@@ -57,7 +57,7 @@
         "description": "Post summary or meta description"
       },
       "coverImageUrl": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Banner or thumbnail image URL"
       },
       "type": {
@@ -65,15 +65,15 @@
         "description": "Post content type (e.g. newsletter, podcast)"
       },
       "podcastUrl": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Direct podcast audio URL if available"
       },
       "podcastDuration": {
-        "type": "number",
+        "type": ["number", "null"],
         "description": "Podcast audio duration in seconds"
       },
       "publicationId": {
-        "type": "integer",
+        "type": ["integer", "null"],
         "description": "Substack publication identifier"
       },
       "publicationUrl": {
@@ -81,23 +81,23 @@
         "description": "Root publication URL"
       },
       "authorName": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Primary author display name"
       },
       "authorHandle": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Primary author Substack handle"
       },
       "authorBio": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Author biography"
       },
       "authorPhotoUrl": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Author avatar photo URL"
       },
       "authorPublicationUrl": {
-        "type": "string",
+        "type": ["string", "null"],
         "description": "Author primary publication URL"
       },
       "scrapedAt": {
